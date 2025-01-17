@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+  </head>
+  <body>
+    <h1> Это шаблон для индекса </h1>
+    <h2>
+      {% comment %} <a href="/index/{{product.id}}/"> {% endcomment %}
+      {% for product in items %}
+      <a href="{% url 'myapp:detail' product.id %}">
+        ID {{product.id}}: {{product.name}}: цена - {{product.price}} | {{product.description}} <br>
+      </a>
+      {% endfor %}
+    </h2>
+  </body>
+</html>
