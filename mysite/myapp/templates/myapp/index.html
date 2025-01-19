@@ -3,8 +3,19 @@
   <head>
     <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
   </head>
-  <body class="bg-sky-500">
-    <h1> Это шаблон для индекса </h1>
+  <body>
+    <nav>
+      <div>
+        <div>
+          <div>
+            <div class="flex">
+              <img class="h-8 w-8" src="{% static 'images/shopping-cart.png' %}" alt='logo' />
+              <span class="text-2xl">Pro Shop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <h2>
       {% comment %} <a href="/index/{{product.id}}/"> {% endcomment %}
       {% for product in items %}
