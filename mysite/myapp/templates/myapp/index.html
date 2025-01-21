@@ -1,16 +1,25 @@
+{% extends "myapp/base.html" %}
 {% load static %}
-<html>
-  <head>
-    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
-  </head>
+
+{% block content %}
   <body>
-    <nav>
-      <div>
-        <div>
-          <div>
-            <div class="flex">
+    <nav class='bg-white shadow-lg'>
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex space-x-7">
+            <!--Логотип-->
+            <div >
+              <a href="#" class="flex items-center px-2 py-4">
               <img class="h-8 w-8" src="{% static 'images/shopping-cart.png' %}" alt='logo' />
-              <span class="text-2xl">Pro Shop</span>
+              <span class="text-gray-500 font-semibold text-2xl">Pro Shop</span>
+              </a>
+            </div>
+            <!--Меню-->
+            <div class="items-center flex space-x-1">
+              <!--Меню HOME border-b-4: это черточка под надписью размером 4,  border-green-500: зеленого цвета -->             
+              <a href="#" class="py-4 px-2 text-gray-500 font-semibold border-b-4 border-green-500">Home</a>
+              <a href="#" class="py-4 px-2 text-gray-500 font-semibold">About</a>
+              <a href="#" class="py-4 px-2 text-gray-500 font-semibold">Contacts</a>
             </div>
           </div>
         </div>
@@ -25,4 +34,4 @@
       {% endfor %}
     </h2>
   </body>
-</html>
+{% endblock content %}
